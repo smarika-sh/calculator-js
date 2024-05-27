@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(22, 38, 42, 0.4), rgba(88, 156, 175, 0.325)), url('sakura.jpg');
+  /* background-image: url('sakura.jpg'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99.5vh;
+  box-sizing: border-box;
+  /* border: solid white 1px; */
+
+
+}
+.container {
+  margin: auto;
+  height: 55vh;
+  width: 40vh;
+  background-color: rgba(37, 6, 31, 0.899);
+  border: solid rgba(255, 255, 255, 0.663) 3px;
+}
+.screen{
+  background-color: rgba(212, 171, 202, 0.886);
+  height: 6vh;
+  font-size: 35px;
+  text-align: right;
+  padding-right: 25px;
+}
+.btn-area{
+display: flex;
+justify-content: space-evenly;
+}
+.btn{
+  height: 65px;
+  width: 60px;
+  border-radius: 1000px;
+  font-size: 30px;
+  background-color: rgb(148, 126, 133);
+  color: white;
+  border: solid white 1px;
+  
+
+}
+.btn:hover{
+  background-color: rgb(214, 98, 135);
+}
+
+  </style>
+</head>
+
+<body>
+  <section>
+   <div class="container">
+    <p class="screen" class="screen" id="screen"></p>
+    <p class="btn-area">
+      <button class="btn" onclick=" calculation+='1'; 
+      document.getElementById('screen').innerHTML=calculation;">1</button>
+      <button class="btn" onclick=" calculation+='2';
+      document.getElementById('screen').innerHTML=calculation;">2</button>
+      <button class="btn" onclick=" calculation+='3';
+      document.getElementById('screen').innerHTML=calculation;">3</button>
+      <button class="btn" onclick=" calculation+=' + ';
+      document.getElementById('screen').innerHTML=calculation;">+</button>
+    </p>
+    <p class="btn-area">
+      <button class="btn" onclick=" calculation+='4';
+      document.getElementById('screen').innerHTML=calculation;">4</button>
+      <button class="btn" onclick=" calculation+='5';
+      document.getElementById('screen').innerHTML=calculation;">5</button>
+      <button class="btn" onclick=" calculation+='6';
+      document.getElementById('screen').innerHTML=calculation;">6</button>
+      <button class="btn" onclick=" calculation+='-';
+      document.getElementById('screen').innerHTML=calculation;">-</button>
+    </p>
+    <p class="btn-area">
+      <button class="btn" onclick=" calculation+='7';
+      document.getElementById('screen').innerHTML=calculation;">7</button>
+      <button class="btn" onclick=" calculation+='8';
+      document.getElementById('screen').innerHTML=calculation;">8</button>
+      <button class="btn" onclick=" calculation+='9';
+      document.getElementById('screen').innerHTML=calculation;">9</button>
+      <button class="btn" onclick=" calculation+='*';
+      document.getElementById('screen').innerHTML=calculation;">x</button>
+    </p>
+    <p class="btn-area">
+      <button class="btn" onclick=" calculation+='.';
+      document.getElementById('screen').innerHTML=calculation;">.</button>
+      <button class="btn" onclick=" calculation+='0';
+      document.getElementById('screen').innerHTML=calculation;">0</button>
+      <button class="btn" onclick=" calculation=eval(calculation);
+      document.getElementById('screen').innerHTML=calculation;
+       calculation=``;">=</button>
+      <button class="btn" onclick=" calculation+='/';
+      document.getElementById('screen').innerHTML=calculation;">/</button>
+    </p>
+   </div>
+  </section>
+
+<!-- Javascript -->
+  <script>
+    let calculation=``;
+  </script>
+</body>
+</html>
