@@ -5,137 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: linear-gradient(rgba(22, 38, 42, 0.4), rgba(88, 156, 175, 0.325)), url('image/sakura.jpg');
-      /* background-image: url('sakura.jpg'); */
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    section {
-      display: flex;
-      justify-content: space-between;
-      gap: 170px;
-      height: 99.5vh;
-      box-sizing: border-box;
-      
-      /* border: solid white 1px; */
-
-    }
-
-    .container-displayTime {
-      margin-top: 80px;
-      height: 28vh;
-      width: 45vh;
-      /* color: #ffffff; */
-      color:  rgb(52, 9, 43) ;
-      text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      background-color: rgba(237, 193, 228, 0.448);  
-      backdrop-filter: blur(10px); 
-      -webkit-backdrop-filter: blur(10px);
-      font-weight: bold;
-      border-radius: 50px;
-    }
-
-    .timeDisplay {
-      /* background-color: rgba(141, 39, 120, 0.582);    */
-      height: 8vh;
-      border-radius: 50px; 
-      
-    }
-
-    .timeDisplay h1{
-      font-size: 60px;
-      /* margin-top: 0px; */
-    }
-
-    .timeDisplay p{
-      font-size: 30px;
-      margin-top: -40px;
-    }
-
-    .container {
-      margin: auto;
-      height: 55vh;
-      width: 40vh;
-      background-color: rgba(37, 6, 31, 0.899);
-      border: solid rgba(255, 255, 255, 0.663) 3px;
-    }
-
-    .container-displayMenu {
-      margin: auto;
-      position: relative;
-      justify-content: flex-start;
-      height: 55vh;
-      width: 40vh;
-      display: flex;
-      background-color: rgba(37, 6, 31, 0.899);
-      
-    }
-
-    .menu {
-      margin: auto;
-      height: 55vh;
-      width: 10vh;
-      background-color: rgba(37, 6, 31, 0.899);
-      box-sizing: border-box;
-      border-radius: 50px;
-      display: flex;
-      /* justify-content: right; */
-      margin-left: auto;
-      right: 0;
-      border: solid rgba(255, 255, 255, 0.663) 3px;
-    }
-
-    .screen {
-      background-color: rgba(212, 171, 202, 0.886);
-      height: 6vh;
-      font-size: 35px;
-      text-align: right;
-      padding-right: 25px;
-    }
-
-    .btn-area {
-      display: flex;
-      justify-content: space-evenly;
-    }
-
-    .btn-clear {
-      height: 30px;
-      width: 80px;
-      font-size: 20px;
-      background-color: rgb(148, 126, 133);
-      color: white;
-      border: solid white 1px;
-      margin-top: -20px;
-      border-radius: 10px;
-    }
-
-    .btn {
-      height: 60px;
-      width: 65px;
-      border-radius: 1000px;
-      font-size: 30px;
-      background-color: rgb(148, 126, 133);
-      color: white;
-      border: solid white 1px;
-
-
-    }
-
-    .btn:hover,
-    .btn-clear:hover {
-      background-color: rgb(214, 98, 135);
-    }
-  </style>
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -211,12 +82,11 @@
       let date = new Date();
       time.innerHTML = date.toLocaleTimeString();
     },1000)
-    
+   
     setInterval(()=> {
       let date2= new Date();
       dateDisplay.innerHTML=date2.toLocaleDateString();
     })
-
 
   </script>
 </body>
