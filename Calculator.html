@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleBeach.css">
 </head>
 
 <body>
   <section>
-    <div class="container-displayTime">
+    <div class="container-displayTime-displayMenu">
       <div class="timeDisplay">
         <h1 id="time"> </h1>
         <p id="date"> </p>
+      </div>
+      <div class="container-displayMenu">
+        <div class="menu"></div>
       </div>
     </div>
     <div class="container">
@@ -74,7 +77,11 @@
 
   <!-- Javascript -->
   <script>
+
+    //for calculation
     let calculation = ``;
+
+    //for date and time display
     let time = document.getElementById("time");
     let dateDisplay= document.getElementById("date");
 
@@ -87,6 +94,9 @@
       let date2= new Date();
       dateDisplay.innerHTML=date2.toLocaleDateString();
     })
+
+
+    //for theme change
 
   </script>
 </body>
